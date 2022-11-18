@@ -10,7 +10,7 @@ class ControlFile{
 
     async Controlcreatetask(req, response) {
         const todorepo = new RepoFile()
-        let result = await todorepo.createtask(req.body.id ,req.body.task, req.body.done);
+        let result = await todorepo.createtask(req.body.task, req.body.done);
         console.log(req.body.id,req.body.task)
         response.json({ "info":"Task Created"})
     }
